@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tape Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="workspace">
+    <section class="calculator">
+      <header class="calculator__header">
+        <h1>Tape Calculator</h1>
+      </header>
+
+      <div class="screen" aria-live="polite">
+        <div class="screen__label" id="screen-label"></div>
+        <output class="screen__value" id="display">0</output>
+      </div>
+
+      <div class="keypad">
+        <button class="key key--utility" data-key="clear" type="button">C</button>
+        <button class="key key--utility" data-key="sign" type="button">±</button>
+        <button class="key key--utility" data-key="percent" type="button">%</button>
+        <button class="key key--operator" data-key="backspace" type="button" aria-label="Backspace">⌫</button>
+
+        <button class="key key--number" data-key="7" type="button">7</button>
+        <button class="key key--number" data-key="8" type="button">8</button>
+        <button class="key key--number" data-key="9" type="button">9</button>
+        <button class="key key--operator" data-key="/" type="button" aria-label="Divide">÷</button>
+
+        <button class="key key--number" data-key="4" type="button">4</button>
+        <button class="key key--number" data-key="5" type="button">5</button>
+        <button class="key key--number" data-key="6" type="button">6</button>
+        <button class="key key--operator" data-key="*" type="button" aria-label="Multiply">×</button>
+
+        <button class="key key--number" data-key="1" type="button">1</button>
+        <button class="key key--number" data-key="2" type="button">2</button>
+        <button class="key key--number" data-key="3" type="button">3</button>
+        <button class="key key--operator" data-key="-" type="button" aria-label="Subtract">−</button>
+
+        <button class="key key--number key--zero" data-key="0" type="button">0</button>
+        <button class="key key--number" data-key="." type="button">.</button>
+        <button class="key key--equals" data-key="=" type="button">=</button>
+        <button class="key key--operator key--plus" data-key="+" type="button">+</button>
+      </div>
+      <p class="calculator__hint">Keyboard works too</p>
+    </section>
+
+    <aside class="tape-panel">
+      <header class="tape-panel__header">
+        <h2>Receipt tape</h2>
+        <span class="tape-count" id="tape-count">0 entries</span>
+      </header>
+      <div class="tape-frame">
+        <div class="tape" id="tape" aria-live="polite">
+          <div class="tape__empty" id="tape-empty">
+            <p>Your calculations<br>will print here.</p>
+          </div>
+        </div>
+      </div>
+      <button class="tear-button" id="tear-button" type="button">Tear off tape</button>
+      <p class="tape-note">Tap any result to use it again</p>
+    </aside>
+  </main>
+</body>
+</html>
